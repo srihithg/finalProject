@@ -4,7 +4,7 @@ author:
   - name: Srihith Garlapati
 date: "`r Sys.Date()`"
 description: |
-  These graphs below show the total amount of earnings each government department(GD) in each state earn anually.
+  These graphs below show the total amount of earnings each government department(GD) in each state earn annually.
 site: distill::distill_website
 ---
 
@@ -32,12 +32,14 @@ raw_data <- x %>%
   slice(2:38) %>%
   select(government_function, whole_dollars) %>%
   filter(whole_dollars > 100000000) %>%
-  ggplot(mapping = aes(x = whole_dollars, y = fct_reorder(government_function, whole_dollars))) + 
+  ggplot(mapping = aes(x = whole_dollars, y = fct_reorder(government_function, whole_dollars), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings Per GD in the USA", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
-       y = "Government Job Department") + 
+       y = "Government Job Department",
+       fill = NULL) + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 
@@ -73,6 +75,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 ```
@@ -90,6 +93,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 ```
@@ -107,6 +111,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
   
@@ -126,6 +131,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 ```
@@ -143,6 +149,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 ```
@@ -160,6 +167,7 @@ regions %>%
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
        x = "Money earned",
        y = "Government Job Department") + 
+  scale_fill_discrete(guide=FALSE) +
   theme_classic() +
   scale_x_continuous(labels = scales::number_format())
 ```
