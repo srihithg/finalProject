@@ -28,7 +28,7 @@ raw_data <- x %>%
   clean_names() %>% 
   slice(2:38) %>%
   select(government_function, whole_dollars) %>%
-  filter(whole_dollars < 1000000000) %>%
+  filter(whole_dollars > 100000000) %>%
   ggplot(mapping = aes(x = whole_dollars, y = fct_reorder(government_function, whole_dollars))) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Dollar Amount Per Government Department", 
@@ -40,5 +40,123 @@ raw_data <- x %>%
 
 raw_data
 ```
+```{r, table_1, include = FALSE }
+regions <- x %>%  
+  clean_names() %>% 
+  slice(39:1938)  %>%
+  select(state, government_function, whole_dollars) %>%
+  mutate(region = case_when(state %in% c("IN", "IL", "IA", "MN", "MI", "WI", "OH")~"Midwest",
+                            state %in% c("VA", "WV", "KY", "TN", "NC", "SC", "GA", "AL", "MS", "LA", "AR", "FL")~"South",
+                            state %in% c("PA", "NY", "VT", "ME", "NH", "MA", "RI", "NJ", "CT", "DE", "MD")~"Northeast",
+                            state %in% c("NT", "ND", "SD", "NE", "KS", "CO", "WY")~"Central",
+                            state %in% c("WA", "OR", "ID", "NV", "UT", "CA", "AK", "HI")~"West",
+                            state %in% c("AZ", "NH", "TX", "OK")~"Southwest")) %>%
+  group_by(region)
+regions
+
+```
+```{r}
+regions %>% 
+  filter(region == "Southwest") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department in the Midwest", 
+       subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+```
+
+```{r}
+regions %>% 
+  filter(region == "Central") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department in the Midwest", 
+       subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+```
+
+```{r, table_2}
+regions %>% 
+  filter(region == "Midwest") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department in the Midwest", 
+       subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+  
+
+```
+```{r}
+regions %>% 
+  filter(region == "Northeast") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 0, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department", 
+       subtitle = "The Education department gets the most amount of money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+```
+```{r}
+regions %>% 
+  filter(region == "West") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department", 
+       subtitle = "The Education department gets the most amount of money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+```
+```{r}
+regions %>% 
+  filter(region == "South") %>%
+  group_by(government_function) %>%
+  summarize(region = region, total = sum(whole_dollars)) %>%
+  unique() %>%
+  filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department", 
+       subtitle = "The Education department gets the most amount of money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+```
+
+
+
 ## Description
 The USA graph shows the total amount of money each department earns annually in the whole country.
