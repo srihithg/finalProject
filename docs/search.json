@@ -5,7 +5,7 @@
       "title": "About",
       "author": [],
       "contents": "\r\nAbout Me\r\nMy name is Srihith Garlapati and I am a junior in William Fremd High School. I live in the wonderful village of Hoffman Estates.\r\nAbout the Project\r\nThis project features one introduction graph that shows the total earnings of government departments in the whole nation. While exploring further, there are also six other graphs which represent government department earnings for each region in the US.\r\nGoals\r\nFind the highest earning government department in the US\r\nAlso find the highest earning department in each region in the US.\r\n\r\nFind the 2nd highest earning government department in the US\r\nAlso find the 2nd highest earning department in each region in the US\r\n\r\n",
-      "last_modified": "2021-06-24T17:42:22-05:00"
+      "last_modified": "2021-06-24T18:10:17-05:00"
     },
     {
       "path": "index.html",
@@ -19,7 +19,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\nUSA Graph\r\n\r\n\r\n\r\nSouthwest Region Graph\r\n\r\n\r\n\r\nCentral Region Graph\r\n\r\n\r\n\r\nMidwest Region Graph\r\n\r\n\r\n\r\nNortheast Region Graph\r\n\r\n\r\n\r\nWest Region Graph\r\n\r\n\r\n\r\nSouth Region Graph\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T17:42:39-05:00"
+      "last_modified": "2021-06-24T18:10:34-05:00"
     },
     {
       "path": "sourceA.html",
@@ -27,7 +27,7 @@
       "description": "https://www.census.gov/data/datasets/2020/econ/apes/annual-apes.html includes the unemployment rates and the annual earnings for each government department in each state and the US.",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T17:42:42-05:00"
+      "last_modified": "2021-06-24T18:10:37-05:00"
     }
   ],
   "collections": []
