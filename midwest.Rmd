@@ -1,0 +1,29 @@
+---
+title: "Midwest"
+author: "Srihith"
+date: "6/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+```{r, x}
+indiana <- x %>%  
+  clean_names() %>% 
+  slice(552, 563) %>%
+  select(government_function, whole_dollars) %>%
+  filter(whole_dollars > 0) %>%
+  ggplot(mapping = aes(x = whole_dollars, y = fct_reorder(government_function, whole_dollars))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Government Departments Earnings in Indiana", 
+       subtitle = "The Education department gets the most amount of money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+indiana
+
+```
+

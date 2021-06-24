@@ -1,0 +1,44 @@
+---
+title: "Government Department Payroll"
+description: |
+  I will be analzing how much money each government department earns in each state
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(janitor)
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+```{r, layout = "l-page", include = TRUE}
+x <- read_csv(file = "2020_state.xls - 2020_state.csv", skip = 14)
+
+
+```
+## USA Graph
+```{r, raw_data, x}
+raw_data <- x %>%  
+  clean_names() %>% 
+  slice(2:38) %>%
+  select(government_function, whole_dollars) %>%
+  filter(whole_dollars < 1000000000) %>%
+  ggplot(mapping = aes(x = whole_dollars, y = fct_reorder(government_function, whole_dollars))) + 
+  geom_col(alpha = 0.5) + 
+  labs(title = "Total Dollar Amount Per Government Department", 
+       subtitle = "The Education department gets the most amount of money annually",
+       x = "Money earned",
+       y = "Government Job Department") + 
+  theme_classic() +
+  scale_x_continuous(labels = scales::number_format())
+
+raw_data
+```
+## Description
+The USA graph shows the total amount of money each department earns annually in the whole country.

@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-23T18:33:12-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Government Department Payroll",
+      "description": "I will be analzing how much money each government department earns in each state\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\nUSA Graph\r\n\r\n\r\n\r\nDescription\r\nThe USA graph shows the total amount of money each department earns annually in the whole country.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-23T18:44:12-05:00"
+    }
+  ],
+  "collections": []
+}
