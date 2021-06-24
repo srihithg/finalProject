@@ -1,7 +1,10 @@
 ---
 title: "Government Department Payroll"
+author: 
+  - name: Srihith Garlapati
+date: "`r Sys.Date()`"
 description: |
-  I will be analzing how much money each government department earns in each state
+  These graphs below show the total amount of earnings each government department(GD) in each state earn anually.
 site: distill::distill_website
 ---
 
@@ -22,8 +25,6 @@ x <- read_csv(file = "2020_state.xls - 2020_state.csv", skip = 14)
 
 
 ```
-## Information
-These graphs below show the total amount of earnings each government department(GD) in each state earn anually.
 ## USA Graph
 ```{r, raw_data, x}
 raw_data <- x %>%  

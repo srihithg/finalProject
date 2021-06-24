@@ -2,19 +2,32 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "About",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T15:23:17-05:00"
+      "contents": "\r\nAbout Me\r\nMy name is Srihith Garlapati and I am a junior in William Fremd High School. I live in the wonderful village of Hoffman Estates.\r\nAbout the Project\r\nThis project features one introduction graph that shows the total earnings of government departments in the whole nation. While exploring further, there are also six other graphs which represent government department earnings for each region in the US.\r\nGoals\r\nFind the highest earning government department in the US\r\n** Also finding the highest earning department in each region in the US.\r\nFind the 2nd highest earning government department in the US\r\n** Also find the 2nd highest earning department in each region in the US\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T16:52:30-05:00"
     },
     {
       "path": "index.html",
       "title": "Government Department Payroll",
-      "description": "I will be analzing how much money each government department earns in each state\n",
+      "description": "These graphs below show the total amount of earnings each government department(GD) in each state earn anually.\n",
+      "author": [
+        {
+          "name": "Srihith Garlapati",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nUSA Graph\r\n\r\n\r\n\r\nSouthwest Region Graph\r\n\r\n\r\n\r\nCentral Region Graph\r\n\r\n\r\n\r\nMidwest Region Graph\r\n\r\n\r\n\r\nNortheast Region Graph\r\n\r\n\r\n\r\nWest Region Graph\r\n\r\n\r\n\r\nSouth Region Graph\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T16:52:47-05:00"
+    },
+    {
+      "path": "sourceA.html",
+      "title": "Source A",
+      "description": "https://www.census.gov/data/datasets/2020/econ/apes/annual-apes.html includes the unemployment rates and the annual earnings for each government department in each state and the US.",
       "author": [],
-      "contents": "\r\nInformation\r\nThese graphs below show the total amount of earnings each government department(GD) in each state earn anually. ## USA Graph\r\n\r\n\r\n\r\nSouthwest Region Graph\r\n\r\n\r\n\r\nCentral Region Graph\r\n\r\n\r\n\r\nMidwest Region Graph\r\n\r\n\r\n\r\nNortheast Region Graph\r\n\r\n\r\n\r\nWest Region Graph\r\n\r\n\r\n\r\nSouth Region Graph\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T15:46:14-05:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T16:52:50-05:00"
     }
   ],
   "collections": []

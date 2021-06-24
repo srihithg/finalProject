@@ -1,10 +1,24 @@
 ---
-title: "About this site"
+title: "About"
 description: |
-  Some additional details about the website
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+## About Me
+My name is Srihith Garlapati and I am a junior in William Fremd High School. I live in the wonderful village of Hoffman Estates.
 
+## About the Project
+This project features one introduction graph that shows the total earnings of government departments in the whole nation. While exploring further, there are also six other graphs which represent government department earnings for each region in the US.
+
+## Goals
+
+* Find the highest earning government department in the US
+
+** Also finding the highest earning department in each region in the US.  
+
+* Find the 2nd highest earning government department in the US
+
+** Also find the 2nd highest earning department in each region in the US

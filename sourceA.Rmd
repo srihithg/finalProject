@@ -1,0 +1,10 @@
+---
+title: "Source A"
+description: "https://www.census.gov/data/datasets/2020/econ/apes/annual-apes.html includes the unemployment rates and the annual earnings for each government department in each state and the US."
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
