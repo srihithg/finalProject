@@ -69,7 +69,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings per GD in the Southwest Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
@@ -87,7 +87,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings per GD in the Central Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
@@ -105,7 +105,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings per GD in the Midwest Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
@@ -125,7 +125,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings Per GD in the Northeast Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
@@ -143,7 +143,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings Per GD in the West Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",
@@ -161,7 +161,7 @@ regions %>%
   summarize(region = region, total = sum(whole_dollars)) %>%
   unique() %>%
   filter(total > 10000000, !government_function == "Total - All Government Employment Functions") %>%
-  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total))) + 
+  ggplot(mapping = aes(x = total, y = fct_reorder(government_function, total), fill = government_function)) + 
   geom_col(alpha = 0.5) + 
   labs(title = "Total Earnings Per GD in the South Region", 
        subtitle = "The Education department which includes primary \nand secondary education gets the most amount \nof money annually",

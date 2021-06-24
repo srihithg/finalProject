@@ -17,8 +17,8 @@ This project features one introduction graph that shows the total earnings of go
 
 * Find the highest earning government department in the US
 
-** Also finding the highest earning department in each region in the US.  
+  + Also find the highest earning department in each region in the US.  
 
 * Find the 2nd highest earning government department in the US
 
-** Also find the 2nd highest earning department in each region in the US
+  + Also find the 2nd highest earning department in each region in the US
